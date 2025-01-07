@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include GSAP via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I am a web developer with a passion for creating beautiful and functional websites.</p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <img src="./html">
+            <h3>HTML</h3>
+            <p>Description of HTML.</p>
+        </div>
+        <div class="project">
+             <img src="./css" alt="Project 2">
+            <h3>CSS</h3>
+            <p>Description of CSS.</p>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML<a href=""></a></li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: myemail@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+.project {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+.skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.skills ul li {
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+    </style>
+    <script>
+        // GSAP Animations
+gsap.from("header", { duration: 1, y: -50, opacity: 0 });
+gsap.from("section", { duration: 1, y: 50, opacity: 0, stagger: 0.3 });
+gsap.from("footer", { duration: 1, y: 50, opacity: 0, delay: 0.5 });
+    </script>
+</body>
+</html>
